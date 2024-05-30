@@ -4,6 +4,7 @@ import { HomePage } from "./page/HomePage";
 import { Layout, theme } from "antd";
 import { Content } from "antd/es/layout/layout";
 import { AppHeader } from "./layout/AppHeader";
+import { BlogPage } from "./page/BlogPage";
 
 function App() {
   const Wrapper = () => {
@@ -34,6 +35,10 @@ function App() {
         {
           path: "/",
           element: <HomePage />,
+        },
+        {
+          path: "/:blogId",
+          element: <BlogPage />,
         },
       ],
     },

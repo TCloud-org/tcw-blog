@@ -2,7 +2,16 @@ import { Col, Flex, Row, Typography } from "antd";
 import { Span } from "../config/LayoutConfig";
 import { BlogCard } from "../dataEntryComponents/BlogCard";
 
-const blogs = [{}, {}, {}];
+const blogs = [
+  {
+    id: "optimize-api-with-multi-step-workflow",
+    title: "Optimize API with Multi-Step Workflow",
+    description:
+      "Check out the most powerful technique to optimize a complex system",
+    date: "05/29/24",
+    readingTime: 5,
+  },
+];
 
 export const HomePage = () => {
   return (
@@ -25,9 +34,9 @@ export const HomePage = () => {
         </Flex>
       </div>
 
-      <Row gutter={[16, 16]} className="py-16 px-32">
+      <Row gutter={[64, 64]} className="py-16 px-16">
         {blogs.map((blog, i) => (
-          <Col {...Span[4]} key={i}>
+          <Col {...Span[3]} key={i}>
             <BlogCard {...blog} />
           </Col>
         ))}
