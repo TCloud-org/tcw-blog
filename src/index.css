@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+html {
+  scroll-padding-top: 4rem;
+}
+
 .ant-row {
   margin-right: 0 !important;
   margin-left : 0 !important;
@@ -27,4 +31,13 @@ code {
   background-color   : #6603fb;
   background-repeat  : no-repeat;
   background-position: center;
+}
+
+a {
+  color     : #4312e5;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #917df7;
 }
