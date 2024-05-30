@@ -66,7 +66,7 @@ export const AppHeader = () => {
         }}
         className="px-2 lg:px-8"
       >
-        <Flex>
+        <Flex className="w-full max-w-screen-2xl ml-auto mr-auto">
           <AppLogoText flip={isFlipColor && !menuOpen} />
         </Flex>
       </Header>

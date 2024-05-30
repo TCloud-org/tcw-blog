@@ -5,7 +5,7 @@ import { BlogCard } from "../dataEntryComponents/BlogCard";
 const blogs = [
   {
     id: "optimize-api-with-multi-step-workflow",
-    title: "Optimize API with Multi-Step Workflow",
+    title: "API Optimization With Multi-Step Workflow",
     description:
       "Check out the most powerful technique to optimize a complex system",
     date: "05/29/24",
@@ -34,13 +34,15 @@ export const HomePage = () => {
         </Flex>
       </div>
 
-      <Row gutter={[32, 32]} className="py-16 px-16">
-        {blogs.map((blog, i) => (
-          <Col {...Span[3]} key={i} className="flex flex-col">
-            <BlogCard {...blog} />
-          </Col>
-        ))}
-      </Row>
+      <Flex vertical className="max-w-screen-2xl ml-auto mr-auto w-full">
+        <Row gutter={[32, 32]} className="py-16 px-2 lg:px-8">
+          {blogs.map((blog, i) => (
+            <Col {...Span[3]} key={i} className="flex flex-col">
+              <BlogCard {...blog} />
+            </Col>
+          ))}
+        </Row>
+      </Flex>
     </Flex>
   );
 };
