@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import { Col, Flex, Row } from "antd";
+import { Col, Flex, Image, Row } from "antd";
 import { createSpan } from "../config/LayoutConfig";
 import { BlogShare } from "../dataEntryComponents/BlogShare";
 import remarkToc from "remark-toc";
 import remarkGfm from "remark-gfm";
 import remarkHeadingId from "remark-heading-id";
+import { Author } from "../dataDisplayComponents/Author";
 
 export const BlogPage = () => {
   const { blogId } = useParams();
@@ -28,7 +29,21 @@ export const BlogPage = () => {
   }, [blogId]);
 
   return (
-    <Flex vertical className="p-24 max-w-screen-2xl ml-auto mr-auto">
+    <Flex vertical className="p-24 max-w-screen-2xl ml-auto mr-auto" gap={16}>
+      <div className="mb-8">
+        <Author
+          imageUrl="https://tcw-blog.s3.us-west-2.amazonaws.com/author/tungdinh-author.png"
+          name="Tung Dinh"
+          date="05/29/24"
+          readingTime={7}
+        />
+      </div>
+      <Image
+        src="https://tcw-blog.s3.us-west-2.amazonaws.com/images/mocule.png"
+        preview={false}
+        height={500}
+        style={{ objectFit: "cover" }}
+      />
       <Row gutter={[32, 32]}>
         <Col {...createSpan(18)}>
           <div style={{ fontSize: 18, lineHeight: 2 }}>

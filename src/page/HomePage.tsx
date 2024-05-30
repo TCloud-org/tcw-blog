@@ -9,7 +9,7 @@ const blogs = [
     description:
       "Check out the most powerful technique to optimize a complex system",
     date: "05/29/24",
-    readingTime: 5,
+    readingTime: 7,
   },
 ];
 
