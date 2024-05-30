@@ -1,7 +1,11 @@
 import { Flex } from "antd";
 import { LinkCopy } from "./LinkCopy";
-import { FacebookShareButton, LinkedinShareButton } from "react-share";
-import { Facebook, LinkedIn } from "@mui/icons-material";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
+import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
 
 export const BlogShare = (props: { title?: string }) => {
   const { title = "" } = props;
@@ -13,6 +17,9 @@ export const BlogShare = (props: { title?: string }) => {
         <FacebookShareButton title={title} url={window.location.href}>
           <Facebook />
         </FacebookShareButton>
+        <TwitterShareButton title={title} url={window.location.href}>
+          <Twitter />
+        </TwitterShareButton>
         <LinkedinShareButton
           title={title}
           summary="Check out this blog post"
