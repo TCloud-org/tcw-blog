@@ -1,3 +1,3 @@
 export const snakeToTitleCase = (str: string): string => {
-  return str.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
+  return str.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 };
