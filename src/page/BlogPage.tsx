@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm";
 import remarkHeadingId from "remark-heading-id";
 import { Author } from "../dataDisplayComponents/Author";
 import { AMS_GET_BLOG_INFO_ENDPOINT } from "../config/AMSEndpointConfig";
+import { snakeToTitleCase } from "../utils/StringUtils";
 
 export const BlogPage = () => {
   const { blogId } = useParams();
@@ -63,7 +64,7 @@ export const BlogPage = () => {
         </Col>
 
         <Col {...createSpan(6)}>
-          <BlogShare />
+          <BlogShare title={snakeToTitleCase(blogId || "")} />
         </Col>
       </Row>
     </Flex>
