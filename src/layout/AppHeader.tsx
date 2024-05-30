@@ -2,8 +2,13 @@ import { Flex, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { CSSProperties, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { AppLogoText } from "../dataDisplayComponents/AppLogoText";
 
 export const HeaderHeight = 64;
+
+const flipColor: any = {
+  "": true,
+};
 
 export const AppHeader = () => {
   const { token } = theme.useToken();
@@ -11,6 +16,9 @@ export const AppHeader = () => {
 
   const [scrollStart, setScrollStart] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const currentPath = location.pathname.split("/").splice(-1)[0];
+  const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;
 
   const headerScrollStyle: CSSProperties = {
     background: token.colorBgContainer,
@@ -59,9 +67,7 @@ export const AppHeader = () => {
         className="px-2 lg:px-8"
       >
         <Flex>
-          <a href="/" className="text-white">
-            The Cloud Blog
-          </a>
+          <AppLogoText flip={isFlipColor && !menuOpen} />
         </Flex>
       </Header>
     </>

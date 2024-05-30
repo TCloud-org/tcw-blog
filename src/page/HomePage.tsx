@@ -34,9 +34,9 @@ export const HomePage = () => {
         </Flex>
       </div>
 
-      <Row gutter={[64, 64]} className="py-16 px-16">
+      <Row gutter={[32, 32]} className="py-16 px-16">
         {blogs.map((blog, i) => (
-          <Col {...Span[3]} key={i}>
+          <Col {...Span[3]} key={i} className="flex flex-col">
             <BlogCard {...blog} />
           </Col>
         ))}

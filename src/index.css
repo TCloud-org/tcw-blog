@@ -16,6 +16,11 @@ code {
     monospace;
 }
 
+.ant-row {
+  margin-right: 0 !important;
+  margin-left : 0 !important;
+}
+
 .bg-main {
   background         : url("https://tcw-images.s3.us-west-2.amazonaws.com/blog-main-bg.png");
   background-size    : fill;

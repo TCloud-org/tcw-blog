@@ -1,4 +1,5 @@
 import { Flex, Image, Typography, theme } from "antd";
+import { formatDate } from "../utils/DateUtils";
 
 export const BlogCard = (props: {
   id: string;
@@ -13,10 +14,10 @@ export const BlogCard = (props: {
   const {
     id,
     imageUrl = "https://tcw-images.s3.us-west-2.amazonaws.com/default-blog.png",
-    title,
-    description,
-    date,
-    readingTime,
+    title = "Title",
+    description = "Description",
+    date = formatDate(new Date()),
+    readingTime = 0,
   } = props;
 
   const handleClick = () => {
@@ -26,7 +27,7 @@ export const BlogCard = (props: {
   return (
     <Flex
       vertical
-      className="cursor-pointer rounded-lg"
+      className="cursor-pointer rounded-lg h-full"
       style={{ boxShadow: token.boxShadow }}
       onClick={handleClick}
     >
@@ -38,16 +39,22 @@ export const BlogCard = (props: {
         className="rounded-tl-lg rounded-tr-lg"
       />
 
-      <Flex vertical className="p-4 rounded-bl-lg rounded-br-lg" gap={16}>
-        <Typography.Title level={4} style={{ margin: 0, fontWeight: 700 }}>
-          {title}
-        </Typography.Title>
+      <Flex
+        vertical
+        className="p-4 rounded-bl-lg rounded-br-lg h-full flex flex-col justify-between"
+        gap={16}
+      >
+        <Flex vertical gap={16}>
+          <Typography.Title level={4} style={{ margin: 0, fontWeight: 700 }}>
+            {title}
+          </Typography.Title>
 
-        <Typography.Paragraph className="text-lg text-slate-500">
-          {description}
-        </Typography.Paragraph>
+          <Typography.Paragraph className="text-lg text-slate-500">
+            {description}
+          </Typography.Paragraph>
+        </Flex>
 
-        <Flex gap={8}>
+        <Flex gap={8} align="flex-end">
           <Typography.Text className="text-slate-700">{date}</Typography.Text>
           <Typography.Text className="text-slate-700">•</Typography.Text>
           <Typography.Text className="text-slate-700">{`${readingTime} min`}</Typography.Text>
