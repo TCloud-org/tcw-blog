@@ -24,7 +24,7 @@ export const Author = (props: {
 
       <Typography.Text className="ml-4 text-slate-500">{date}</Typography.Text>
       <Typography.Text className="text-slate-500">•</Typography.Text>
-      <Typography.Text className="text-slate-500">{`${readingTime} min`}</Typography.Text>
+      <Typography.Text className="text-slate-500">{`${readingTime} min read`}</Typography.Text>
     </Flex>
   );
 };

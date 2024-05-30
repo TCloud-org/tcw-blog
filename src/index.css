@@ -41,3 +41,7 @@ a {
 a:hover {
   color: #917df7;
 }
+
+img {
+  width: 100%;
+}
