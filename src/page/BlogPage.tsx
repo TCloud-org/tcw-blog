@@ -33,8 +33,12 @@ export const BlogPage = () => {
   }, [blogId]);
 
   return (
-    <Flex vertical className="p-24 max-w-screen-2xl ml-auto mr-auto" gap={16}>
-      <div className="mb-8">
+    <Flex
+      vertical
+      className="p-4 lg:p-24 max-w-screen-2xl ml-auto mr-auto"
+      gap={16}
+    >
+      <div className="mb-8 mt-16 lg:mt-0">
         <Author
           imageUrl="https://tcw-blog.s3.us-west-2.amazonaws.com/author/tungdinh-author.png"
           name="Tung Dinh"
