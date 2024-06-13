@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
 import { Col, Flex, Image, Row } from "antd";
-import { createSpan } from "../config/LayoutConfig";
-import { BlogShare } from "../dataEntryComponents/BlogShare";
-import remarkToc from "remark-toc";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom";
 import remarkGfm from "remark-gfm";
 import remarkHeadingId from "remark-heading-id";
+import remarkToc from "remark-toc";
+import { createSpan } from "../config/LayoutConfig";
 import { Author } from "../dataDisplayComponents/Author";
-import { AMS_GET_BLOG_INFO_ENDPOINT } from "../config/AMSEndpointConfig";
+import { BlogShare } from "../dataEntryComponents/BlogShare";
 import { snakeToTitleCase } from "../utils/StringUtils";
 
 export const BlogPage = () => {
@@ -20,7 +19,7 @@ export const BlogPage = () => {
     const fetchMarkdown = async () => {
       try {
         const response = await fetch(
-          `${AMS_GET_BLOG_INFO_ENDPOINT}?id=${blogId}`
+          "https://utfs.io/f/1436a98c-884a-4225-8ab3-a342c6e5126d-dt75qg.md"
         );
         const markdownText = await response.text();
         setMarkdownContent(markdownText);
@@ -40,14 +39,14 @@ export const BlogPage = () => {
     >
       <div className="mb-8 mt-16 lg:mt-0">
         <Author
-          imageUrl="https://tcw-blog.s3.us-west-2.amazonaws.com/author/tungdinh-author.png"
+          imageUrl="https://utfs.io/f/a3cdc50b-46a6-4bb3-9369-12a6ebbb6c40-gru4o1.png"
           name="Tung Dinh"
           date="05/29/24"
           readingTime={7}
         />
       </div>
       <Image
-        src="https://tcw-blog.s3.us-west-2.amazonaws.com/images/mocule.png"
+        src="https://utfs.io/f/58274aeb-68a2-41c1-abfc-c8243e001da8-mxaa7u.png"
         preview={false}
         height={500}
         style={{ objectFit: "cover" }}

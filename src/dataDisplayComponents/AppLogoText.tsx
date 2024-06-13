@@ -10,11 +10,7 @@ export const AppLogoText = (props: ImageProps & { flip?: boolean }) => {
     >
       <Image
         {...props}
-        src={
-          flip
-            ? "https://tcw-icon.s3.us-west-2.amazonaws.com/9.png"
-            : "https://tcw-icon.s3.us-west-2.amazonaws.com/7.png"
-        }
+        src="https://utfs.io/f/bd04c0a7-53fe-4f53-9c25-e44a5e0afb75-ejb435.png"
         width={width}
         preview={preview}
       />

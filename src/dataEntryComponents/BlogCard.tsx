@@ -13,7 +13,7 @@ export const BlogCard = (props: {
 
   const {
     id,
-    imageUrl = "https://tcw-images.s3.us-west-2.amazonaws.com/default-blog-img.png",
+    imageUrl = "https://utfs.io/f/1b2b53bb-bf0c-42d9-b3c0-4ee772ad33a4-9p834s.png",
     title = "Title",
     description = "Description",
     date = formatDate(new Date()),

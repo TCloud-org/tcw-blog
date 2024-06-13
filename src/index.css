@@ -26,9 +26,9 @@ html {
 }
 
 .bg-main {
-  background         : url("https://tcw-images.s3.us-west-2.amazonaws.com/blog-main-bg.png");
-  background-size    : fill;
-  background-color   : #6603fb;
+  background         : url("https://utfs.io/f/4008bf80-3e84-41d7-bd3e-644e11ae0fbd-f1t4yk.png");
+  background-size    : cover;
+  background-color   : black;
   background-repeat  : no-repeat;
   background-position: center;
 }

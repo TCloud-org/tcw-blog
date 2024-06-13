@@ -121,7 +121,7 @@ Designing the workflow involves structuring the sequence in which each operation
 
 Below is a sample design of an employee onboarding workflow:
 
-![Employee Onboarding Workflow](https://tcw-blog.s3.us-west-2.amazonaws.com/images/blog-dia-1.png)
+![Employee Onboarding Workflow](https://utfs.io/f/55853a61-8752-408d-bf17-2099d7007d2e-kbsnuz.png)
 
 ### Step 4: Implement Individual Steps
 
